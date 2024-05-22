@@ -1,0 +1,29 @@
+{
+  "connectWallet": "Hubungkan wallet",
+  "changeLanguage": "Ubah bahasa",
+  "disconnectWallet": "Keluar",
+  "indonesia": "Indonesia",
+  "english": "English",
+  "pages": {
+    "landing": {
+      "heroTitle": "Tarik hasil penambangan setiap hari, tanpa minimum.",
+      "heroSubtitle": "Klaim hasil penambangan dalam BTC atau USDT, tanpa biaya",
+      "button": "Mulai disini"
+    },
+    "verify": {
+      "title": "Mari Mulai.",
+      "subtitle": "Untuk memulai penarikan hadiah penambangan Anda, hubungkan kolam penambangan Anda dalam 3 langkah",
+      "steps": {
+        "connectWallet": "Silakan hubungkan dompet Anda",
+        "transferHashRate": "Transfer hashrate f2pool Anda kepada kami",
+        "verify": "Verifikasi",
+        "walletConnected": "Dompet terhubung",
+        "f2poolName": "nama pengguna F2Pool Anda",
+        "transferAmount": "Berapa banyak Hashrate (TH/s) yang ingin Anda transfer",
+        "successTitle": "Hebat sekali!",
+        "successSubtitle": "Sekarang Anda dapat menarik hadiah penambangan Anda setiap hari, tanpa biaya.",
+        "gotoDashboard": "Pergi Ke Dasbor Anda"
+      }
+    }
+  }
+}

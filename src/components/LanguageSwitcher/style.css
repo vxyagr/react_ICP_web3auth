@@ -1,0 +1,9 @@
+.language-switcher-dropdown {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.change-language-text {
+    color: white;
+    font-weight: 600;
+}

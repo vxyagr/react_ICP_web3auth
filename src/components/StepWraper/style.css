@@ -1,0 +1,67 @@
+.step-wrapper {
+    width: 100%;
+    min-height: 174px;
+    border-radius: 16px;
+    border: 1px solid #98A2B3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 14px 40px 20px;
+    margin-bottom: 22px;
+}
+
+.step-wrapper.active{
+    background-color: #134E48;
+}
+
+.step-wrapper.isDesktop {
+    padding-left: 40px;
+}
+
+
+.step-wraper-badge .ant-badge-count {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 16px;
+    color: black !important;
+    background: #98A2B3;
+    box-shadow: none !important;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.step-wraper-badge-active .ant-badge-count {
+    color: white !important;
+    background: #79d5c6 !important;
+}
+
+.step-wraper-title {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: left;
+    color :#98A2B3 !important;
+    margin-bottom: 0px !important;
+}
+
+.step-wraper-title-active {
+    color: white !important;
+}
+
+.step-wraper-title-done {
+    color: #79d5c6 !important;
+}
+
+.step-wraper-title-children {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.step-wraper-title-children.block {
+   flex-direction: column !important;
+   align-items: flex-start !important;
+}
+

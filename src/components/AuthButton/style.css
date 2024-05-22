@@ -1,0 +1,35 @@
+.modal-header .title {
+    color: black;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.75rem;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+ 
+.modal-header .subtitle {
+    color: rgb(107 114 128);
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+.modal-content {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.modal-content .modal-info {
+    color: rgb(107 114 128);
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    margin-top: 10px;
+}
+
+
+.modal-button {
+    justify-content: center !important;
+    height: 45px !important;
+}

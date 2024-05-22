@@ -1,0 +1,72 @@
+@import "@fontsource/passion-one"; /* Add the entire font family */
+@import "@fontsource/passion-one/400.css"; /* Regular weight */
+@import "@fontsource/passion-one/700.css"; /* Bold weight */
+@import "@fontsource-variable/inter";
+@import "@fontsource/passero-one";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-animate-color {
+  animation: colorChange 3s infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: violet;
+  }
+  25% {
+    background-color: red;
+  }
+  50% {
+    background-color: purple;
+  }
+  75% {
+    background-color: blue;
+  }
+  100% {
+    background-color: violet;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-warm-white;
+  }
+
+  .current-stash-transform {
+    transform-origin: left center;
+    /*transform: rotateY(-15deg) rotate(16deg) rotateX(2deg);*/
+  }
+
+  .current-bonus-transform {
+    transform-origin: left center;
+    transform: rotateY(2deg) rotate(-4deg) rotateX(-12deg);
+  }
+
+  .money-amount-transform {
+    margin-left: calc(0.1vw - 14px);
+    transform-origin: left center;
+    /*transform: rotateY(-22deg) rotate(16deg) rotateX(2deg);*/
+  }
+}
+
+.landing-container {
+  text-align: center;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 10;
+}
+
+.sticky-image {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

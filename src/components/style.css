@@ -1,0 +1,26 @@
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.transition-max-h {
+  max-height: 100vh;
+}
+
+.scrollable-div {
+  width: 400px; /* Adjust the width as needed */
+  /* Adjust the height as needed */
+  overflow-y: scroll; /* Enables vertical scrolling */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollable-div::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.scrollable-div {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

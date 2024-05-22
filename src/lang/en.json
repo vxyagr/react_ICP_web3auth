@@ -1,0 +1,28 @@
+{
+  "connectWallet": "Connect wallet",
+  "changeLanguage": "Change language",
+  "disconnectWallet": "Disconnect",
+  "indonesia": "Indonesia",
+  "pages": {
+    "landing": {
+      "heroTitle": "Withdraw mining reward every day, no minimum pay out.",
+      "heroSubtitle": "Claim your mining reward in BTC or USDT, with zero fees",
+      "button": "Start here"
+    },
+    "verify": {
+      "title": "Let’s get started.",
+      "subtitle": "To start withdrawing your mining reward, link your mining pool in 3 steps",
+      "steps": {
+        "connectWallet": "Please connect your wallet",
+        "transferHashRate": "Transfer your f2pool hashrate to us",
+        "verify": "Verify",
+        "walletConnected": "Wallet connected",
+        "f2poolName": "your F2Pool username",
+        "transferAmount": "How much Hashrate (TH/s) you wish to transfer",
+        "successTitle": "That’s awesome!",
+        "successSubtitle": "Now you’ll be able to withdraw your mining reward daily, zero fees.",
+        "gotoDashboard": "Go To Your Dashboard"
+      }
+    }
+  }
+}
