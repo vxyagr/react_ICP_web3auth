@@ -53,6 +53,8 @@ const Landing = () => {
     setGameData,
     setTicketPrice,
     walletAddress,
+    setWalletAddress,
+    setUserData,
     walletAlias,
   } = useContext(AppContext);
   const [connected, setConnected] = useState(false);
@@ -90,17 +92,45 @@ const Landing = () => {
     }
   }, [connected]);
 
+  const handleLogout = async () => {
+    //setLoading(true);
+    await loginInstance.logout();
+    setCanisterActor();
+    setUserData(false);
+    //setGameData(false);
+    setWalletAddress(false);
+
+    //  closeModal();
+    //setLoading(false);
+  };
+
   return (
     <div className="landing-container h-screen">
       <Header className="z-999999" />
-      <button
-        onClick={() => {
-          setConnectOpen(true);
-        }}
-        className="w-full  text-2xl  lg:hidden  px-6 py-3 font-passion text-warm-white rounded-lg bg-[#EE5151] "
-      >
-        Connect Wallet to Play
-      </button>
+
+      {!walletAddress ? (
+        <button
+          onClick={() => {
+            setConnectOpen(true);
+          }}
+          className="w-full  text-2xl  px-6 py-3 font-passion text-warm-white rounded-lg bg-[#EE5151] "
+        >
+          Connect Wallet to Play
+        </button>
+      ) : (
+        <button
+          onClick={() => {
+            handleLogout();
+          }}
+          className="w-full  text-2xl  px-6 py-3 font-passion text-warm-white rounded-lg bg-[#EE5151] "
+        >
+          Disconnect
+        </button>
+      )}
+      {walletAddress ? "wallet address : " + walletAddress : ""}
+      <br />
+      {walletAddress ? "game data : " + gameData.toString() : ""}
+
       <ConnectModal className="z-70" />
       <GameModal className="z-70" />
       <BuyTicketModal className="z-70" />

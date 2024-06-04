@@ -87,7 +87,7 @@ export default function ConnectModal() {
   async function handleLogin() {
     setLoading(true);
     try {
-      /*const { privKey } = await loginInstance.login({
+      const { privKey } = await loginInstance.login({
         loginProvider: "google",
         redirectUrl: `${window.origin}`,
       });
@@ -95,13 +95,11 @@ export default function ConnectModal() {
       if (!privKey) {
         throw new Error("failed login");
       }
-0be033f837a725b80409a64329f09721785aba8adf97535a93e5fbeacf933e31
-2e1313dc657101e87e923bde73fcce90a85f9a114f7d2a25094fc3ec50d4958f
+
       setCurrentEmail(loginInstance.getUserInfo().email);
-*/
+
       //console.log("privkey");
-      const privKey =
-        "2e1313dc657101e87e923bde73fcce90a85f9a114f7d2a25094fc3ec50d4958f";
+
       const actor = actorCreation(privKey);
       const icpAgent_ = icpAgent(privKey);
       const eyes_ = eyesCreation(privKey);

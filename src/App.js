@@ -4,8 +4,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 
 import Layout from "./layout";
 import Landing from "./containers/Landing";
-import Migrate from "./containers/Migrate";
-import MigrateICP from "./containers/MigrateICP";
+
 const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
@@ -15,14 +14,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Landing />,
-      },
-      {
-        path: "/migrate",
-        element: <Migrate />,
-      },
-      {
-        path: "/migrateicp",
-        element: <MigrateICP />,
       },
     ],
   },
