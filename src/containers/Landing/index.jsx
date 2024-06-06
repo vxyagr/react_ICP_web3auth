@@ -67,6 +67,7 @@ const Landing = () => {
   const getGameDatas = async () => {
     const actor = actorCreation(generalPrivKey);
     let game_ = await actor.getCurrentGame();
+    console.log(game_, "<<<<<<<<<<<<<<< game data");
     var principalString_ = getUserPrincipal(generalPrivKey).toString();
 
     let ticket_ = await actor.getTicketPrice();
