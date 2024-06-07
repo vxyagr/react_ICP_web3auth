@@ -27,7 +27,7 @@ const MobileRoundInfo = ({ players, walletAddress, setConnectOpen, handleLogout,
                                 onClick={() => {
                                     handleLogout();
                                 }}
-                                className="w-full py-2 rounded-md bg-dark-blue text-white font-bold text-lg bg-bright-red"
+                                className="w-full py-2 rounded-md text-white font-bold text-lg bg-bright-red"
                             >
                                 Disconnect
                             </button>
@@ -41,7 +41,7 @@ const MobileRoundInfo = ({ players, walletAddress, setConnectOpen, handleLogout,
                                 onClick={() => {
                                     setConnectOpen(true);
                                 }}
-                                className="w-full py-2 rounded-md bg-dark-blue text-white font-bold text-lg bg-bright-red"
+                                className="w-full py-2 rounded-md text-white font-bold text-lg bg-bright-red"
                             >
                                 Connect Wallet to Play
                             </button>
