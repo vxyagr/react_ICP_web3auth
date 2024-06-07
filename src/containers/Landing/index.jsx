@@ -32,6 +32,8 @@ import BuyTicketModal from "../../components/BuyTicketModal";
 import ClaimModal from "../../components/ClaimModal";
 import TransferModal from "../../components/TransferModal";
 import GuideModal from "../../components/GuideModal";
+import HomePage from "./Home";
+
 const { Title } = Typography;
 
 const Landing = () => {
@@ -75,6 +77,7 @@ const Landing = () => {
     setTicketPrice(ticket_);
     setGameData(game_);
   };
+
   useEffect(() => {
     //console.log(gameData);
     const actor_ = actorCreation(generalPrivKey);
@@ -83,6 +86,7 @@ const Landing = () => {
       ? setConnected(true)
       : setConnected(false);
   }, [loginInstance, userData, gameData, generalPrivKey]);
+
   useEffect(() => {
     getGameDatas();
   }, [generalPrivKey]);
@@ -108,30 +112,7 @@ const Landing = () => {
   return (
     <div className="landing-container h-screen">
       <Header className="z-999999" />
-
-      {!walletAddress ? (
-        <button
-          onClick={() => {
-            setConnectOpen(true);
-          }}
-          className="w-full  text-2xl  px-6 py-3 font-passion text-warm-white rounded-lg bg-[#EE5151] "
-        >
-          Connect Wallet to Play
-        </button>
-      ) : (
-        <button
-          onClick={() => {
-            handleLogout();
-          }}
-          className="w-full  text-2xl  px-6 py-3 font-passion text-warm-white rounded-lg bg-[#EE5151] "
-        >
-          Disconnect
-        </button>
-      )}
-      {walletAddress ? "wallet address : " + walletAddress : ""}
-      <br />
-      {walletAddress ? "game data : " + gameData.toString() : ""}
-
+      <HomePage walletAddress={walletAddress} setConnectOpen={setConnectOpen} handleLogout={handleLogout} gameData={gameData} />
       <ConnectModal className="z-70" />
       <GameModal className="z-70" />
       <BuyTicketModal className="z-70" />
