@@ -17,6 +17,7 @@ export default {
         "warning-yellow": "#FAC515",
         "warm-white": "#FAF7EE",
         "dark-cream": "#DDD9CB",
+        'primary-gray': '#C4BCC8'
       },
     },
   },
