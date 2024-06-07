@@ -15,6 +15,7 @@ import Icon, {
 import { actorCreation, getUserPrincipal } from "../service/icdragoncanister";
 import { eyesCreation } from "../service/eyesledgercanister";
 import { icpAgent } from "../service/icpledgercanister";
+import { actorCreationSpin } from "../service/spincanister";
 import { Principal } from "@dfinity/principal";
 
 import { AppContext } from "../context/AppProvider";
@@ -39,6 +40,7 @@ export default function ConnectModal() {
     setToggleMobileMenu,
     setCurrentEmail,
     setWalletAlias,
+    setSpinActor
   } = useContext(AppContext);
 
   const closeModal = () => {
@@ -103,6 +105,8 @@ export default function ConnectModal() {
       const actor = actorCreation(privKey);
       const icpAgent_ = icpAgent(privKey);
       const eyes_ = eyesCreation(privKey);
+      const spinWheel_ = actorCreationSpin(privKey);
+
       var principalString_ = getUserPrincipal(privKey).toString();
       //console.log("user data " + JSON.stringify(principalString_));
       console.log("initial address " + principalString_);
@@ -110,12 +114,15 @@ export default function ConnectModal() {
       //console.log(icpAgent_);
       setICPAgent(icpAgent_);
       setEyesLedger(eyes_);
+      setSpinActor(spinWheel_);
       //console.log("eyes canister ");
       //console.log(eyes_);
       var user_ = await actor.getUserData();
       var game_ = await actor.getCurrentGame();
       var ticket_ = await actor.getTicketPrice();
       var reward_ = await actor.initialEyesTokenCheck();
+      var spinGame = await spinWheel_.getCurrentGame();
+
       var rwd = Number(reward_) / 100000000;
       setEyesReward(rwd);
       var frst = false;
@@ -123,7 +130,8 @@ export default function ConnectModal() {
         setFirst(true);
         frst = true;
       }
-      //console.log("game");
+
+      console.log(spinGame, "<<<<<<<<<<<<<<< spinGame");
       //console.log(game_);
       setUserData(user_);
       setGameData(game_);

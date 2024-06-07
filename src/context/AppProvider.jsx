@@ -58,6 +58,7 @@ export const AppProvider = ({ children }) => {
   const [eyesBalance, setEyesBalance] = useState(false);
   const [toggleMobileMenu, setToggleMobileMenu] = useState(false);
   const [currentEmail, setCurrentEmail] = useState(false);
+  const [spinActor, setSpinActor] = useState(false);
 
   useEffect(() => {
     async function initializeOpenlogin() {
@@ -129,6 +130,8 @@ export const AppProvider = ({ children }) => {
         setCurrentEmail,
         walletAlias,
         setWalletAlias,
+        spinActor,
+        setSpinActor
       }}
     >
       <Helmet>
