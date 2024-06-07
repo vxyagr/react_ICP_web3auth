@@ -193,7 +193,7 @@ const HistoryPage = () => {
           </table>
         </div>
       </div>
-      <img src={DragonBackground} className="z-0 rounded-lg w-full absolute bottom-0 right-0 invisible lg:visible lg:w-4/12 2xl:w-2/6" />
+      <img src={DragonBackground} className="z-0 rounded-lg w-full absolute bottom-0 right-0 hidden lg:block lg:w-4/12 2xl:w-2/6" />
     </div>
   );
 };
