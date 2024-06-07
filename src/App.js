@@ -4,6 +4,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 
 import Layout from "./layout";
 import Landing from "./containers/Landing";
+import HistoryPage from "./containers/Landing/History";
 
 const queryClient = new QueryClient();
 
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Landing />,
+      },
+      {
+        path: "/history",
+        element: <HistoryPage />,
       },
     ],
   },
